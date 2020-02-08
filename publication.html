@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>publication.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Jakey BLUE (藍俊宏)</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="course.html">Course</a>
+</li>
+<li>
+  <a href="publication.html">Publication</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown-header">Contact</li>
+<li>
+  <a href="contact.html"></a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br/></p>
+<blockquote>
+<p>Journal Articles</p>
+</blockquote>
+<ul>
+<li>A. Chouichi, J. Blue, C. Yugma, and F. Pasqualini, “Heterogranular multivariate analytics for detecting the root causes of the mismatching machines in semiconductor manufacturing,” to appear, IEEE Transaction on Semiconductor Manufacturing.</li>
+<li>W.T. Yang, J. Blue, A. Roussy, J. Pinaton, and M. Reis, “A structure data driven framework for virtual metrology modeling,” IEEE Transaction on Automation Sciences and Engineering, early access on 30 December, 2019. (DOI: 10.1109/TASE.2019.2941047)</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Automatic equipment fault fingerprint extraction for the fault diagnostic on the batch process data,” Applied Soft Computing Journal, special issue for Smart Production to Empower Industry 4.0, vol. 68, pp. 972-989, Jul. 2018.</li>
+<li>Y.-T. Kao, S. Dauzère-Pérès, J. Blue, and S.-C. Chang, “Impact of integrating equipment health in production scheduling for semiconductor fabrication,” Computers &amp; Industrial Engineering, vol. 120, pp. 450-459, Jun. 2018.</li>
+<li>M. Rizquez, A. Roussy, J. Blue, L. Bucelle, J. Pinaton, and J. Pasquet, “Key effects and process parameters extraction on the CD of Reactive Ion Etching (RIE) based on DOE Modelling,” IEEE Transactions on Semiconductor Manufacturing, vol. 30, no. 4, pp. 539-546, Nov. 2017.</li>
+<li>T. Rato, J. Blue, J. Pinaton, and M. Reis, “Translation invariant multiscale energy-based PCA (TIME-PCA) for monitoring batch processes in semiconductor manufacturing,” IEEE Transaction on Automation Sciences and Engineering, vol. 14, no. 2, pp. 894-904, Apr. 2017.</li>
+<li>C. Yugma, J. Blue, S. Dauzère-Pérès, and A. Obeid, “Integration of scheduling and advanced process control in semiconductor manufacturing: review and outlook,” Journal of Scheduling, vol. 18, no. 2, pp. 195-205, Apr. 2015.</li>
+<li>J. Blue, D. Gleispach, A. Roussy, and P. Scheibelhofer, “Tool condition diagnosis with a recipe-independent hierarchical monitoring scheme,” IEEE Transactions on Semiconductor Manufacturing, vol. 26, no. 1, pp. 82-91, Feb. 2013.</li>
+<li>J. Blue and A. Chen, “Spatial variance spectrum analysis and its application to unsupervised detection of systematic wafer spatial variations,” IEEE Transactions on Automation Science and Engineering, vol. 8, no. 1, pp. 56-66, Jan. 2011.</li>
+<li>A. Chen and J. Blue, “Performance analysis of demand planning approaches for aggregating, forecasting and disaggregating interrelated demands,” International Journal of Production Economics, vol. 128, no. 2, pp. 586-602, Jul. 2010.</li>
+<li>A. Chen and J. Blue, “Recipe-independent health indicator for tool predictive maintenance and fault diagnosis,” IEEE Transactions on Semiconductor Manufacturing, vol. 22, no. 4, pp. 522-535, Nov. 2009.</li>
+<li>A. Chen, C. H. Hsu, and J. Blue, “Demand planning approaches to aggregating and forecasting interrelated demands for safety stock and backup capacity planning,” International Journal of Production Research. vol. 45, no. 10, pp. 2269-2294, May 2007.</li>
+</ul>
+<hr />
+<blockquote>
+<p>Conference Proceedings &amp; Abstracts</p>
+</blockquote>
+<ul>
+<li>J. Blue, “Convolutional correlation structure monitoring for batch process diagnosis,” presented in Asia Pacific Industrial Engineering and Management Systems (APIEMS), Kanazawa, Japan, Dec. 2-5, 2019.</li>
+<li>C. Tablot, J. Blue, V. Borodin, P. Cardi, D. Feillet, “Short-range forecasting system of extreme-weather events in the Rhône valley,” presented in American Meteorological Society (AMS) Annual Meeting, Phoenix, USA, January 6-10, 2019.</li>
+<li>A. Chouichi, J. Blue, C. Yugma, F. Pasqualini, “The detection and the control of machine/chamber mismatching in semiconductor manufacturing,” in Proceedings of the Winter Simulation Conference (WSC), Gothenburg, Sweden, December 9-12, 2018, pp. 3583-3591.</li>
+<li>W.T. Yang, J. Blue, A. Roussy, M. Reis, J. Pinaton, “Virtual metrology modeling based on Gaussian Bayesian network,” in Proceedings of the Winter Simulation Conference (WSC), Gothenburg, Sweden, December 9-12, 2018, pp. 3574-3582.</li>
+<li>A. Chouichi, J. Blue, C. Yugma, F. Pasqualini, “Metrology modeling based on process parameters in semiconductor manufacturing,” presented in European Network for Business and Industrial Statistics (ENBIS), Nancy, France, September 2-6, 2018.</li>
+<li>W.T. Yang, J. Blue, A. Roussy, M. Reis, J. Pinaton, “Run-to-run control based on Gaussian Bayesian network in semiconductor manufacturing,” presented in European Network for Business and Industrial Statistics (ENBIS), Nancy, France, September 2-6, 2018.</li>
+<li>H. Rostami, J. Blue, A. Chen, and C. Yugma, “Equipment deterioration modeling and causes diagnosis in semiconductor manufacturing,” in Proceedings of IEEE International Conference on Automation Science and Engineering (IEEE-CASE), Munich, Germany, August 20-24, 2018.</li>
+<li>S. Bourzghi, G. Georges, A. Roussy, J. Blue, E. Faivre, and J. Pinaton, “The light behavior from Shallow Trench Isolation profiles at Chemical Mechanical Planarization step and correlation with optical endpoint system by interferometry,” in Proceedings of Society of Photo-Optical Instrumentation Engineers (SPIE), San Diego, California, USA, August 19-23, 2018, pp. 107500C1-8.</li>
+<li>K.L. Huang, J. Blue, H.C. Weng, and S.H. Liu, “Single machine scheduling with consideration of preventive maintenance and machine health,” in Proceedings of International Conference Engineering, Applied Sciences and Technology (ICEAST), Phuket, Thailand, July 4-7, 2018.</li>
+<li>W.T. Yang, J. Blue, A. Roussy, and M. Reis, “Advanced R2R controller in semiconductor manufacturing with real-time equipment condition,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, April 30- May 3, 2018, pp. 346-352.</li>
+<li>A. Chouichi, J. Blue, C. Yugma, and F. Pasqualini, “Heterogranular multivariate analytics for detecting and controlling the root causes of the mismatching machines in semiconductor manufacturing,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, April 30- May 3, 2018, pp. 334-339.</li>
+<li>J. Blue, J. Pinaton, “Temporal convolutional features consolidated as a virtual SVID for process diagnosis,” presented in European Advanced Process Control and Manufacturing (APC|M), Dresden, Germany, April 16-18, 2018.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “FDC-based equipment deterioration modeling and the root cause identification in semiconductor industry,” presented in European Advanced Process Control and Manufacturing (APC|M), Dresden, Germany, April 16-18, 2018.</li>
+<li>J. Blue, “Manifold dimension reduction of FDC data as the unsupervised fault diagnosis in semiconductor manufacturing,” presented in International Symposium on Semiconductor Manufacturing Intelligence (ISMI), Hsinchu, Taiwan, February 7-9, 2018.</li>
+<li>A. Chouichi, J. Blue, C. Yugma, and F. Pasqualini, “Heterogranular multivariate analytics for detecting and controlling the root causes of the mismatching machines in semiconductor manufacturing,” in Proceedings of International Symposium on Semiconductor Manufacturing Intelligence (ISMI), Hsinchu, Taiwan, February 7-9, 2018.</li>
+<li>S. Bourzghi, A. Roussy, J. Blue, G. Georges, E. Faivre, K. Labory, and A. Allard, “Device pattern impact on optical endpoint detection by interferometry for STI CMP,” in Proceedings of International Conference on Planarization/CMP Technology (ICPT), Leuven, Belgium, October 11-13, 2017, pp. 127-132.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Equipment health diagnosis and prognosis using a wavelet-based windowing approach in semiconductor manufacturing,” presented in Advanced Process Control (APC) Conference, Austin, USA, October 9-12, 2017.</li>
+<li>W. T. Yang, J. Blue, A. Roussy, and M. Reis, “Advanced Run-to-Run controller in semiconductor manufacturing with real-time equipment condition,” presented in European Network for Business and Industrial Statistics (ENBIS), Naples, Italy, September 9-14, 2017.</li>
+<li>A. Chouichi, J. Blue, C. Yugma, and F. Pasqualini, “Heterogranular multivariate analytics for detecting and controlling the root causes of the mismatching machines in semiconductor manufacturing,” presented in European Network for Business and Industrial Statistics (ENBIS), Naples, Italy, September 9-14, 2017.</li>
+<li>S. Bourzghi, A. Roussy, J. Blue, G. Georges, E. Faivre, K. Labory, and J. Pinaton, “Embedded spectroscopic reflectometry metrology on FEOL silicon dioxide trench polishing equipment,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, 2017, pp. 387-392.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Equipment health modeling for deterioration prognosis and fault signatures diagnosis, in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, May 15-18, 2017, pp. 357-362.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Equipment deterioration prognosis and fault diagnosis in semiconductor manufacturing,” presented in European Advanced Process Control and Manufacturing (APC|M), Dublin, Ireland, April 10-12, 2017.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Equipment anomaly detection and automatic fault fingerprint extraction in semiconductor manufacturing,” in Proceedings of International Conference on Machine Learning and Applications (ICMLA), Anaheim, USA, December 18-20, 2016, pp. 534-539.</li>
+<li>J. Blue, J. Pinaton, and A. Roussy, “Run-to-Run sensor variation monitoring for process fault diagnosis in semiconductor manufacturing,” in Proceedings of the Winter Simulation Conference (WSC), Washington D. C., USA, December 11-14, 2016, pp. 2523-2534.</li>
+<li>Y. T. Kao, S. C. Chang, J. Blue, and S. Dauzère-Pérès, “Generalized overall equipment effectiveness for integrated scheduling and process control,” in Proceedings of International Symposium on Semiconductor Manufacturing (ISSM), Hsinchu, Taiwan, December 12-13, 2016.</li>
+<li>Y. T. Kao, S. C. Chang, S. Dauzère-Pérès, and J. Blue, “Opportunity for improving fab effectiveness by Predictive Overall Equipment Effectiveness (POEE),” in Proceedings of the e-Manufacturing &amp; Design Collaboration Symposium (e-MDC), Hsinchu, Taiwan, September 9, 2016.</li>
+<li>H. Rostami, J. Blue, and C. Yugma, “Equipment anomaly detection and automatic fault fingerprint extraction in semiconductor manufacturing,” in Proceedings of International Symposium on Semiconductor Manufacturing Intelligence (ISMI), Hsinchu, Taiwan, August 7-10, 2016.</li>
+<li>Y. T. Kao, S. Dauzère-Pérès, and J. Blue, “Integrating equipment health in job shop scheduling for semiconductor fabrication,” in Proceedings of International Conference on Project Management and Scheduling (PMS), Valencia, Spain, April 19-22, 2016.</li>
+<li>T. Rato, J. Blue, J. Pinaton, and M. Reis, “Translation invariant multiscale energy-based PCA (TIME-PCA) for monitoring batch processes in semiconductor manufacturing,” presented in European Network for Business and Industrial Statistics (ENBIS), Prague, Czech Republic, September 6-10, 2015.</li>
+<li>E. Padonou and J. Blue, “Wafer spatial pattern decomposition and diagnosis based on processing characteristics,” presented in European Network for Business and Industrial Statistics (ENBIS), Prague, Czech Republic, September 6-10, 2015.</li>
+<li>E. Padonou, O. Roustant, J. Blue, and H. Duverneuil, “Spatial risk assessment on circular domains: application to wafer profile monitoring,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, May 3-6, 2015, pp. 223-227.</li>
+<li>J. Blue and J. Pinaton, “FDC-based equipment deterioration modelling,” presented in European Advanced Process Control and Manufacturing Conference (APC|M), Munich, Germany, April 13-15, 2015.</li>
+<li>G. Porri, G. Melchiorre, J. Driessen, M. Mom, P. Vialletelle, R. Roussel, G. Lepelletier, J. Blue, and C. Rodriguez, “Wait time waste, how big is the plant’s hidden capacity?,” presented in European Advanced Process Control and Manufacturing Conference (APC|M), Munich, Germany, April 13-15, 2015.</li>
+<li>J. Blue, J. Pinaton, and A. Roussy, “Run-to-run profile monitoring on sensor temporal data for tool condition diagnosis”, presented in European Network for Business and Industrial Statistics (ENBIS), Linz, Austria, September 21-25, 2014.</li>
+<li>E. Padonou, J. Blue, O. Roustant, and H. Duverneuil, “Response surface approximation for profile monitoring in circular domains,” presented in European Network for Business and Industrial Statistics (ENBIS), Linz, Austria, September 21-25, 2014.</li>
+<li>C. Yugma, J. Blue, S. Dauzère-Pérès, and P. Vialletelle, “Integration of scheduling and advanced process control in semiconductor manufacturing: review and outlook,” in Proceedings of IEEE International Conference on Automation Science and Engineering (IEEE-CASE), Taipei, Taiwan, August 18-22, 2014, pp. 93-98.</li>
+<li>J. Blue, J. Pinaton, and A. Roussy, “FDC R2R variation monitoring for sensor level diagnosis in tool condition hierarchy,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, May 19-21, 2014, pp. 92-97.</li>
+<li>J. Driessen, M. Mom, P. Vialletelle, R. Roussel, G. Lepelletier, G. Porri, G. Melchiorre, J. Blue, and C. Rodriguez, “Wait-Time-Waste opportunities in SECS/GEM based 200mm fabs,” presented in European Advanced Process Control and Manufacturing Conference (APC|M), Rome, Italy, April 7-9, 2014.</li>
+<li>J. Blue, A. Thieullen, and A. Roussy, “Efficient FDC based on hierarchical tool condition monitoring scheme,” in Proceedings of SEMI Advanced Semiconductor Manufacturing Conference (ASMC), Saratoga Springs, USA, May 15-17 2012, pp. 359-364.</li>
+<li>D. Gleispach, J. Blue, A. Roussy, and M. Haselmann, “Hierarchical monitor scheme for recipe-independent tool condition evaluation. One approach of EHF (Equipment Health Factor),” presented in European Advanced Process Control and Manufacturing Conference (APC|M), Grenoble, France, April 16-18, 2012.</li>
+<li>J. Blue, A. Roussy, D. Gleispach, M. Haselmann, and S. Dauzère-Pérès, “Tool condition prognosis with the hierarchical monitor scheme,” presented in Intel European Research &amp; Innovation Conference (ERIC), Leixlip, Ireland, October 12-14, 2011.</li>
+<li>A. Chen, H. S. Hsueh, and J. Blue, “Optimum sampling for track PEB CD integrated metrology,” in Proceedings of IEEE Conference on Automation Science and Engineering (CASE), Bangalore, India, August 22-25, 2009, pp. 439-442.</li>
+<li>C. M. Fan, J. Blue, S. C. Chang, D. Y. Liao, A. Chen, and Y. C. Chou, “Design of optimization-tool benchmark system for continuous improvements of semiconductor manufacturing,” in Proceedings of e-Manufacturing Symposium, Taipei, Taiwan, June 14, 2007.</li>
+<li>A. Chen, J. Blue, T. C. Chou, and T. K. Yang, “Recipe-independent tool health indicator and fault prognosis,” in Proceedings of International Symposium on Semiconductor Manufacturing (ISSM), Tokyo, Japan, September 25-27, 2006, pp. 460-463.</li>
+<li>J. Blue and A. Chen, “Recipe-independent tool health indicator for predictive maintenance and tool qualification,” in Proceedings of 7th Advanced Equipment Control/Advanced Process Control (AEC/APC) Conference, Aix-en-Province, France, March 29-31, 2006.</li>
+<li>C. M. Fan, J. Blue, S. C. Chang, D. Y. Liao, A. Chen, and Y. C. Chou, “Design and development of benchmark environment and optimization tools for 300mm foundry manufacturing service,” in Proceedings of Chinese Institute of Industrial Engineers, HsinChiu, Taiwan, December 17, 2005.</li>
+<li>A. Chen and J. Blue, “Performance analysis of demand planning approaches for aggregating, forecasting and disaggregating interrelated demands,” in Proceedings of Asia Pacific Industrial Engineering and Management Systems(APIEMS) Conference, Manila, Philippines, December 4-7, 2005.</li>
+</ul>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
